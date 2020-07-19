@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
   return (
@@ -31,6 +32,16 @@ const task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
       </div>
     </div>
   );
+};
+
+task.propsTypes = {
+  task: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+  }),
+  onArchiveTask: PropTypes.func,
+  onPinTask: PropTypes.func,
 };
 
 export default task;
