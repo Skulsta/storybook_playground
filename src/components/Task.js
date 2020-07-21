@@ -34,7 +34,7 @@ const task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
   );
 };
 
-task.propsTypes = {
+task.propTypes = {
   task: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
